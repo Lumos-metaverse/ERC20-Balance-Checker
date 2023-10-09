@@ -1,0 +1,1 @@
+Note: The query will only work for Ethereum testnet (Sepolia) network.
