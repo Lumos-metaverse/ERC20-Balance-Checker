@@ -41,18 +41,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Event listener for the "Check Balance" button
     document.getElementById('check-balance').addEventListener('click', async () => {
         const userAddress = document.getElementById('wallet-address').value;
-        const tokenAddress = document.getElementById('contract-address').value; // Replace with the address of the ERC20 token you want to check or add another input field for it
+        const tokenAddress = document.getElementById('contract-address').value;
 
         try {
             const result = await contract.methods.checkBalance(userAddress, tokenAddress).call();
             
-
             document.getElementById('balance-value').innerText = web3.utils.fromWei(result.balance.toString(), 'ether');
             document.getElementById('token-symbol-value').innerText = result.tokenSymbol;
 
         } catch (err) {
             console.error('Error fetching balance:', err);
-            console.log("Error fetching")
         }
     });
 });
