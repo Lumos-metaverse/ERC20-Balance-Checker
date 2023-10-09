@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ERC20Balance Checker</title>
+</head>
+<body>
+      <div class="checker-container">
+        <h1>ERC20 Balance Checker</h1>
+        <div class="input-section">
+            <label for="wallet-address">Input your wallet Address:</label>
+            <input type="text" id="wallet-address" placeholder="0x...">
+            <label for="contract-address">Input the ERC Contract Address:</label>
+            <input type="text" id="contract-address" placeholder="0x...">
+            <button id="check-balance">Check Balance</button>
+        </div>
+        <div class="balance-section">
+            <div class="balance">
+                <h2>Balance</h2>
+                <p id="balance-value">0.0</p>
+            </div>
+            <div class="token-symbol">
+                <h2>Token Symbol</h2>
+                <p id="token-symbol-value">N/A</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
